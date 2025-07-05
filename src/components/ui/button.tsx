@@ -20,12 +20,18 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        blue:"bg-[var(--Blue-button)] text-white shadow-xs hover:bg-[var(--Blue-button)]/70 text-[14px]",
+        delete:"bg-[var(--delete-button)] text-white shadow-xs hover:bg-[var(--delete-button)]/70 h-[41px]",
+        filter:"bg-[var(--red)] text-white shadow-xs hover:bg-[var(--red)]/70 text-[14px]",
+        import:"bg-[var(--import-button-bg)] text-[var(--import-button-txt)] shadow-xs hover:bg-[var(--import-button-bg)]/70 text-[14px] ",
+        more:"bg-[var(--more-button-bg)] text-[var(--more-button-txt)] shadow-xs hover:bg-[var(--more-button-bg)]/70 h-[41px]",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
+        new: "px-[14px] py-[10px] rounded-[4px]",
       },
     },
     defaultVariants: {
