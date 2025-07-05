@@ -25,7 +25,7 @@ import sample from "@/assets/icon2.png"
 export default function Coaches() {
     return (
         <div>
-            <div></div>
+            <div className="py-2 text-2xl">Coaches</div>
             <StatsCards />
             <Buttonbar/>
             <CoachTableSection />

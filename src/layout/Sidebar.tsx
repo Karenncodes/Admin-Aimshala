@@ -63,6 +63,7 @@ const AppSidebar = () => {
           gap-6
           transition-all duration-300 ease-in-out
           border bg-white z-40
+          rounded-sm
           ${hovered ? 'md:w-72 overflow-y-auto' : 'md:w-20 overflow-hidden'}
           ${mobileOpen ? 'w-72' : 'w-0'}
           ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
