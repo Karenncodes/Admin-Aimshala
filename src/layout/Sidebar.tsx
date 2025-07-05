@@ -43,31 +43,28 @@ const AppSidebar = () => {
 
   return (
     <>
-      {/* Mobile Toggle Button */}
       <button
         className="md:hidden fixed top-6 left-6 z-50 bg-gray-200 p-2 rounded"
         onClick={() => setMobileOpen(!mobileOpen)}
       >
         <MoveRight className="h-6 w-6 transition-transform duration-150" />
       </button>
-
-      {/* Sidebar */}
       <nav
         className={`
-          fixed md:top-[90px] md:xl:left-[72px] md:lg:left-[50px] md:left-[24px] left-0
-          md:h-[calc(100vh-120px)]
-          h-[100vh]
-          flex flex-col
-          px-6 py-4
-          gap-6
-          transition-all duration-300 ease-in-out
-          border bg-white z-40
-          rounded-sm
-          ${hovered ? 'md:w-72 overflow-y-auto' : 'md:w-20 overflow-hidden'}
-          ${mobileOpen ? 'w-72' : 'w-0'}
-          ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
-          md:translate-x-0
-          overflow-x-hidden
+            fixed md:top-[90px] md:xl:left-[72px] md:lg:left-[50px] md:left-[24px] left-0
+            md:h-[calc(100vh-120px)]
+            h-[100vh]
+            flex flex-col
+            px-6 py-4
+            gap-6
+            transition-all duration-300 ease-in-out
+            border bg-white z-40
+            rounded-sm
+            ${hovered ? 'md:w-72 overflow-y-auto' : 'md:w-20 overflow-hidden'}
+            ${mobileOpen ? 'w-72' : 'w-0'}
+            ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
+            md:translate-x-0
+            overflow-x-hidden
         `}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
