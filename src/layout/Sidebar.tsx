@@ -40,7 +40,6 @@ const AppSidebar = () => {
   const [hovered, setHovered] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const toggleSidebar = () => setMobileOpen(!mobileOpen);
 
   return (
     <>
