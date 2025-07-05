@@ -84,6 +84,13 @@
   --gray:#878A99;
   --gray2:#495057;
 
+  /*Buttons*/
+  --Blue-button:#29BADB;
+  --delete-button:#5B71B9;
+  --import-button-bg:#F0F7F1;
+  --import-button-txt:#67B173;
+  --more-button-bg:#E9F8FB;
+  --more-button-txt:#29BADB;
   --font-Inter: "Inter", serif;
 }
 

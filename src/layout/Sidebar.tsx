@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { User2, Ellipsis, Menu } from 'lucide-react'
+import { User2, Ellipsis, MoveRight } from 'lucide-react'
 
 const AppSidebar = () => {
   const Main = [
@@ -40,33 +40,38 @@ const AppSidebar = () => {
   const [hovered, setHovered] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
+  const toggleSidebar = () => setMobileOpen(!mobileOpen);
+
   return (
     <>
       {/* Mobile Toggle Button */}
-      <button
-        className="md:hidden fixed top-6 left-6 z-50 bg-gray-200 p-2 rounded"
-        onClick={() => setMobileOpen(!mobileOpen)}
+        <button
+        onClick={toggleSidebar}
+        className={`
+          md:hidden fixed z-50 p-2 rounded-full bg-white shadow
+          transition-all duration-300 ease-in-out
+          ${mobileOpen ? 'top-2 left-58 rotate-180 delay-100' : 'top-4 left-4 rotate-0 delay-0'}
+        `}
       >
-        <Menu className="h-6 w-6" />
+        <MoveRight className="h-6 w-6 transition-transform duration-150" />
       </button>
 
+      {/* Sidebar */}
       <nav
         className={`
           fixed md:top-[90px] md:xl:left-[72px] md:lg:left-[50px] md:left-[24px] left-0
           md:h-[calc(100vh-120px)]
-          h-100hv
+          h-[100vh]
           flex flex-col
           px-6 py-4
-          gap-4
+          gap-6
           transition-all duration-300 ease-in-out
-          rounded-[8px] shadow-xl
           border bg-white z-40
           ${hovered ? 'md:w-72 overflow-y-auto' : 'md:w-20 overflow-hidden'}
           ${mobileOpen ? 'w-72' : 'w-0'}
           ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
           md:translate-x-0
           overflow-x-hidden
-          ${mobileOpen ? 'overflow-y-scroll' : 'overflow-hidden'}
         `}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -96,7 +101,7 @@ const AppSidebar = () => {
   )
 }
 
-export default AppSidebar;
+export default AppSidebar
 
 function AddTitle({
   title,
@@ -131,7 +136,7 @@ function AddLinks({
         <div
           key={id}
           className={`flex items-center min-w-0 ${
-            hovered ? 'gap-3' : 'gap-1'
+            hovered ? 'gap-4' : 'gap-1'
           } transition-all duration-300`}
         >
           <Icon
