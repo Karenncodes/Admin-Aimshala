@@ -7,7 +7,7 @@ import AimshalaLogo from '@/assets/logos/aimshala.png';
 
 export default function Navbar() {
     return (
-        <header className="flex h-18 items-center justify-between  border-b bg-white  dark:bg-gray-800 w-full overflow-hidden px-[24px] xl:px-[72px] lg:px-[50px]  fixed top-0 left-0">
+        <header className="flex h-18 items-center justify-between  border-b bg-white  dark:bg-gray-800 w-full overflow-hidden pl-[70px] pr-[24px] md:px-[24px] xl:px-[72px] lg:px-[50px]  fixed top-0 left-0">
             <div className="flex items-left gap-2 xl:gap-6  lg:gap-4">
                 <img src={AimshalaLogo} alt="aimshalaLogo"  className="h-[34px] w-auto"/>
                 <div className="relative hidden lg:block">

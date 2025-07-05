@@ -45,13 +45,9 @@ const AppSidebar = () => {
   return (
     <>
       {/* Mobile Toggle Button */}
-        <button
-        onClick={toggleSidebar}
-        className={`
-          md:hidden fixed z-50 p-2 rounded-full bg-white shadow
-          transition-all duration-300 ease-in-out
-          ${mobileOpen ? 'top-2 left-58 rotate-180 delay-100' : 'top-4 left-4 rotate-0 delay-0'}
-        `}
+      <button
+        className="md:hidden fixed top-6 left-6 z-50 bg-gray-200 p-2 rounded"
+        onClick={() => setMobileOpen(!mobileOpen)}
       >
         <MoveRight className="h-6 w-6 transition-transform duration-150" />
       </button>
